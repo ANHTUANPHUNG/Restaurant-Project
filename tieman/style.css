@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
-    cursor: pointer;
+    cursor: default;
 }
 
 #wrapper {
@@ -42,6 +42,7 @@
     border-bottom: 1px solid red;
     /* padding-bottom: .5rem; */
     background-size: 5px;
+    cursor: pointer;
 
 }
 
@@ -51,6 +52,7 @@
     /* padding-bottom: .5rem; */
     background-size: 5px;
     transform: scale(1.5);
+    cursor: pointer;
 }
 
 #menu .item a {
@@ -66,11 +68,14 @@
 
 #item1 {
     position: fixed;
+
 }
 
-
-
-
+#item1 i:hover {
+    color: red;
+    cursor: pointer;
+    font-size: 100px;
+}
 
 #banner {
     width: 100%;
@@ -114,6 +119,7 @@
 
 #banner .box-left button:hover {
     background: orange;
+    cursor: pointer;
 }
 
 #banner .box-right {
@@ -187,6 +193,7 @@
 
 #wp-products .item .but .but-sale:hover {
     background: #c11818;
+    cursor: pointer;
 }
 
 #list-products {
@@ -195,7 +202,10 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+
 }
+
+
 
 #list-products .item {
     width: 290px;
@@ -205,11 +215,21 @@
     margin-bottom: 50px;
 }
 
-#list-products .item img {
+#list-products .item .img:hover {
+    width: 290px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+#list-products .item .img {
     display: block;
     margin: 0px auto;
     margin-top: 17px;
+    border-radius: 10px;
+
 }
+
+
 
 #list-products .item .stars {
     display: flex;
@@ -222,6 +242,16 @@
     color: black;
     font-weight: bold;
     margin-top: 0;
+}
+
+#list-products .item .name a {
+    text-decoration: none;
+    color: red;
+}
+
+#list-products .item .name a:hover {
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #list-products .item .desc {

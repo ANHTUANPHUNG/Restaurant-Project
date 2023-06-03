@@ -67,7 +67,7 @@ let html = ``
 listData.map((product, index) => {
     return html += `
     <div class="item">
-            <img src="${product.image}" alt="">
+            <img src="${product.image}" class ="img" alt="">
             <div class="stars">
             <span>
             <img src="fileanh/star.png" alt="">
