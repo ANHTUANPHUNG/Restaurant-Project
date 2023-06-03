@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="detail">
+
+    </div>
+</body>
+<script src="./data.js"></script>
+<script>
+    let id = +window.location.href.split('id=')[1]
+    console.log(id);
+    let html = ``
+    let detailElement = document.getElementById('detail')
+    listData.map((product) => {
+        if (product.id == id) {
+            return html += `
+            <div class="item">
+                    <img src="${product.image}" alt="">
+                    <div class="stars">
+                        <span>
+                            <img src="fileanh/star.png" alt="">
+                        </span>
+                        <span>
+                            <img src="fileanh/star.png" alt="">
+                        </span>
+                        <span>
+                            <img src="fileanh/star.png" alt="">
+                        </span>
+                        <span>
+                            <img src="fileanh/star.png" alt="">
+                        </span>
+                        <span>
+                            <img src="fileanh/star.png" alt="">
+                        </span>
+                    </div>
+                    <div class="name"><a href='detail.html?id=${product.id}'>${product.name}</a></div>
+                    <div class="desc">${product.description}</div>
+                    <div id="priceDetail">${product.price} VNĐ</div>
+                    <input type="number" value="1" id="quantityDetail"/>
+                    <select>
+                        ${product.sizes.map((size) => {
+                return `<option value="${size}">${size}</option>`
+            })}
+                    </select>
+                </div>
+            `
+        }
+    })
+    detailElement.innerHTML = html
+
+
+    // Tăng giảm giá khi tăng giảm số lượng
+    let priceElement = document.getElementById('priceDetail')
+    let price = +document.getElementById('priceDetail').innerHTML.split(' ')[0]
+    console.log(price);
+    let quantityElement = document.getElementById('quantityDetail')
+    function handleChangeQuantity() {
+        let quantity = +quantityElement.value
+        let priceTotal = price * quantity
+        priceElement.innerHTML = `${priceTotal} VNĐ`
+    }
+
+    quantityElement.addEventListener('change', handleChangeQuantity)
+</script>
+
+</html>

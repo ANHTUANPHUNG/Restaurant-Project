@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà hàng bà Tuyết</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="fileanh/tải xuống.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="fileanh/tải xuống.png" alt="" style="width: 105px;">
+            </a>
+            <div id="menu">
+                <div class="item">
+                    <a href="">Trang chủ</a>
+                </div>
+                <div class="item">
+                    <a href="#sanpham">Sản phẩm</a>
+                </div>
+                <div class="item">
+                    <a href="#nhanxet">Blog</a>
+                </div>
+                <div class="item">
+                    <a href="#noidung">Liên hệ</a>
+                </div>
+            </div>
+            <div id="actions">
+
+                <div id="item1">
+                    <i class="fa fa-shopping-cart" style="font-size: 50px;color: #ff0000;"></i>
+
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>Đặc Sản</span>
+                    <br>
+                    <span>Cố Đô</span>
+                </h2>
+                <p>Chuyên cung cấp các món ăn đặc sản Huế</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="box-right">
+                <img src="fileanh/img-1.png" alt="" style="border-radius: 22px;">
+                <img src="fileanh/img-2.png" alt="" style="border-radius: 22px;">
+                <img src="fileanh/img-3.png" alt="" style="border-radius: 22px;">
+            </div>
+        </div>
+        <div id="wp-products">
+            <h2 id="sanpham">Món ăn của nhà hàng bà Tuyết</h2>
+            <ul id="list-products">
+            </ul>
+            <div class="list-page">
+                <div class="item">
+                    <a href="">1</a>
+                </div>
+                <div class="item">
+                    <a href="">2</a>
+                </div>
+                <div class="item">
+                    <a href="">3</a>
+                </div>
+                <div class="item">
+                    <a href="">4</a>
+                </div>
+            </div>
+            <div class="list-sale">
+                <table class="list-saletb" style="width: 100%; " border="1" cellspacing="0" ;>
+                    <thead class="list-salethead" style="background-color:#f48484;">
+                        <tr class="list-saletr">
+                            <th>STT</th>
+                            <th>Tên món</th>
+                            <th style="width: 84px;">Ảnh món ăn</th>
+                            <th>Mô tả</th>
+                            <th style="width: 100px;">Số lượng</th>
+                            <th style="width: 89px;">Hủy món</th>
+                            <th>Gía tiền</th>
+                            <th style="width: 150px;">Tổng tiền</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="list-saletbody" style="text-align: center;">
+
+                    </tbody>
+                    <tfoot>
+                        <tr style="text-align: center; background-color: #f48484; height: 50px;">
+                            <td colspan="7">Tổng đơn hàng</td>
+                            <td id="payment">00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"><button id="thanhtoan" style="width: 100%; height: 50px;" onclick="pay()">
+                                    <h3>Thanh toán</h3>
+                                </button></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div id="saleoff">
+            <div class="box-left">
+                <h1>
+                    <span>giảm giá sản phẩm</span>
+                    <span>10%</span>
+                </h1>
+            </div>
+            <div class="box-right"></div>
+        </div>
+        <div id="comment">
+            <h2 id="nhanxet">Nhận xét của khách hàng</h2>
+            <div id="comment-body">
+                <div class="prev">
+                    <a href="#">
+                        <img src="fileanh/prev.png" alt="">
+                    </a>
+                </div>
+                <ul id="list-comment">
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="fileanh/anhmang5.jfif" alt="" style="border-radius: 50px;">
+                        </div>
+
+                        <div class="stars">
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="name">Bùi Quang Tuấn</div>
+                        <div class="text">
+                            <p style="text-align: center">Nhà hàng phục vụ tuyệt với, nhân viên thân thiện, món ăn rất
+                                vừa miêng. Tôi sẽ ghé lại
+                                lần sau</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="fileanh/anhmang1.jfif" alt="" style="border-radius: 50px;">
+                        </div>
+
+                        <div class="stars">
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="name">Lê Hoàng Anh Thư</div>
+                        <div class="text">
+                            <p style="text-align: center">Mình đã ghé quán nhiều lần và quán chưa bao giờ làm mình thất
+                                vọng. Nếu có cơ hối đến Huế
+                                mộng mơ, các bạn nên thử 1 lần đến quán để cảm nhận rõ những gì mình nói.</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="fileanh/anhmang4.jfif" alt="" style="border-radius: 50px;">
+                        </div>
+
+                        <div class="stars">
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="name">Phan Thị Minh Tú</div>
+                        <div class="text">
+                            <p style="text-align: center">Mình đến Huế và được bạn bè giới thiệu quán này. Đây là 1 nơi
+                                tuyệt với nếu bạn muốn ăn
+                                được những món ăn ngon của Huế. Nếu có dịp đến Huế lần nữa mình nhất định sẽ ghé lại.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="fileanh/anhmang2.jfif" alt="" style="border-radius: 50px;">
+                        </div>
+
+                        <div class="stars">
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="name">Lê Văn Cường</div>
+                        <div class="text">
+                            <p style="text-align: center">Đây là một nơi ăn uống tuyệt vời của người dân Huế. Gía cả
+                                luôn phải chăng.</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="fileanh/anhmang3.jfif" alt="" style="border-radius: 50px;">
+                        </div>
+
+                        <div class="stars">
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="fileanh/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="name">Hoàng Thị Tú</div>
+                        <div class="text">
+                            <p style="text-align: center">Mình là thực khách trung thành của tiệm này, món ăn đậm đà
+                                đúng với khẩu vị của người
+                                Huế.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="next">
+                    <a href="#">
+                        <img src="fileanh/next.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="fileanh/tải xuống.png" style="width: 200px;" alt="">
+                </div>
+                <p>Cung cấp sản lượng với chất lượng an toàn với quý khách</p>
+            </div>
+            <div class="box">
+                <h3 id="noidung"> Nội dung</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Liên hệ</h3>
+                <form action="">
+                    <input type="text" placeholder="địa chỉ liên hệ">
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="scrips.js"></script>
+    <script>
+        // let listProduct = new ListProduct()
+
+
+
+
+
+    </script>
+</body>
+
+
+</html>
