@@ -1,16 +1,16 @@
 let listData = [
-    { id: 1, image: 'fileanh/a5.jfif', but: "mua ngay", name: "Bún bò", category: 'Một tô bún bò chuẩn vị Huế sẽ gồm sợi bún, thịt bò, tiết heo, chả cua và nước dùng.', description: "Được mọi du khách yêu thích", price: 25000, rating: 5, sizes: [5, 10] },
-    { id: 2, image: 'fileanh/a6.jpg', but: "mua ngay", name: "Bún thịt nướng", category: 'Nguyên liệu làm bún thịt nướng khá đơn giản gồm thịt nạc, thịt ba chỉ, gan heo, rau sống, dưa leo.', description: "Sự đậm đà của gia vị", price: 20000, rating: 4, sizes: [5, 10] },
-    { id: 3, image: 'fileanh/a7.jpg', but: "mua ngay", name: "Bánh canh cá lóc", category: 'Món bánh canh cá lóc phải đạt được hương vị thơm ngon, đúng chuẩn xứ Huế.', description: "Đặc trưng riêng biệt", price: 15000, rating: 5, sizes: [5, 10] },
-    { id: 4, image: 'fileanh/a8.jfif', but: "mua ngay", name: "Bánh lọc", category: 'Món bánh này lại được làm từ những nguyên liệu rất cơ bản, dễ tìm như: bột năng, bột sắn, tôm, thịt, gia vị...', description: "Loại bột chỉ có ở Huế", price: 15000, rating: 5, sizes: [5, 10] },
-    { id: 5, image: 'fileanh/a10.jpg', but: "mua ngay", name: "Bánh nậm", category: 'Những người phụ nữ đã dùng bột gạo, tôm, tép giã nhuyễn để làm nên chiếc bánh nậm.', description: "Sự kết hợp hoàn hảo", price: 15000, rating: 4, sizes: [5, 10] },
-    { id: 6, image: 'fileanh/a9.jpg', but: "mua ngay", name: "Bánh bèo", category: 'Bánh bèo Huế bánh mỏng hơn, có bột tôm sấy, khi ăn kèm theo da heo chiên giòn.', description: "Sự đậm đà của gia vị", price: 20000, rating: 4, sizes: [5, 10] },
-    { id: 7, image: 'fileanh/a11.jpg', but: "mua ngay", name: "Bánh ướt", category: 'Lá bánh ướt ở đây dẻo, dai, khi cuộn với phần nhân không bị vỡ. Miếng thịt ngoài giòn, trong mềm, được tẩm ướp đậm đà và nướng trên bếp than hoa.', description: "Được mọi du khách yêu thích", price: 15000, rating: 5, sizes: [5, 10] },
-    { id: 8, image: 'fileanh/a12.jpg', but: "mua ngay", name: "Bánh ít", category: 'Bánh được làm từ bột nếp, nhân đậu xanh và dừa. bên ngoài bánh đều được gói bằng lá chuối xanh.', description: "Nước chấm tuyệt hảo", price: 15000, rating: 4, sizes: [5, 10] },
-    { id: 9, image: 'fileanh/a13.jpg', but: "mua ngay", name: "Nem lụi", category: 'Nem lụi Huế được làm từ thịt heo giã nhuyễn, bì thái mỏng như miến, mỡ heo thái hạt lựu, rồi tất cả các nguyên liệu đem ướp cùng muối, tiêu đường, thính và trộn đều lên', description: "Chứa đầy đủ gia vị", price: 10000, rating: 5, sizes: [5, 10] },
-    { id: 10, image: 'fileanh/a14.jpg', but: "mua ngay", name: "Bánh xèo", category: 'Nhân bánh cũng tương tự như bánh khoái, có thêm củ sắn và đại xanh chưa được bỏ vỏ.', description: "Nước chấm tuyệt hảo", price: 20000, rating: 5, sizes: [5, 10] },
-    { id: 11, image: 'fileanh/a15.jpg', but: "mua ngay", name: "Bánh ép", category: 'Bánh ép Huế được ép thủ công nhiều lần bằng khuôn gang trên bếp than đỏ lửa.', description: "Loại bột chỉ có ở Huế", price: 5000, rating: 5, sizes: [5, 10] },
-    { id: 12, image: 'fileanh/a16.jpg', but: "mua ngay", name: "Mè xửng", category: 'Mè xửng Huế nổi tiếng với vị ngọt ngào, béo bùi của mạch nha hòa quyện với đậu phộng và mè vừng.', description: "Chỉ có thể ở Huế", price: 15000, rating: 4, sizes: [5, 10] },
+    { id: 1, image: 'fileanh/a5.jfif', name: "Bún bò", describe: 'Một tô bún bò chuẩn vị Huế sẽ gồm sợi bún, thịt bò, tiết heo, chả cua và nước dùng.', title: "Được mọi du khách yêu thích", price: 25000 },
+    { id: 2, image: 'fileanh/a6.jpg', name: "Bún thịt nướng", describe: 'Nguyên liệu làm bún thịt nướng khá đơn giản gồm thịt nạc, thịt ba chỉ, gan heo, rau sống, dưa leo.', title: "Sự đậm đà của gia vị", price: 20000 },
+    { id: 3, image: 'fileanh/a7.jpg', name: "Bánh canh cá lóc", describe: 'Món bánh canh cá lóc phải đạt được hương vị thơm ngon, đúng chuẩn xứ Huế.', title: "Đặc trưng riêng biệt", price: 15000 },
+    { id: 4, image: 'fileanh/a8.jfif', name: "Bánh lọc", describe: 'Món bánh này lại được làm từ những nguyên liệu rất cơ bản, dễ tìm như: bột năng, bột sắn, tôm, thịt, gia vị...', title: "Loại bột chỉ có ở Huế", price: 15000 },
+    { id: 5, image: 'fileanh/a10.jpg', name: "Bánh nậm", describe: 'Những người phụ nữ đã dùng bột gạo, tôm, tép giã nhuyễn để làm nên chiếc bánh nậm.', title: "Sự kết hợp hoàn hảo", price: 15000 },
+    { id: 6, image: 'fileanh/a9.jpg', name: "Bánh bèo", describe: 'Bánh bèo Huế bánh mỏng hơn, có bột tôm sấy, khi ăn kèm theo da heo chiên giòn.', title: "Sự đậm đà của gia vị", price: 20000 },
+    { id: 7, image: 'fileanh/a11.jpg', name: "Bánh ướt", describe: 'Lá bánh ướt ở đây dẻo, dai, khi cuộn với phần nhân không bị vỡ. Miếng thịt ngoài giòn, trong mềm, được tẩm ướp đậm đà và nướng trên bếp than hoa.', title: "Được mọi du khách yêu thích", price: 15000 },
+    { id: 8, image: 'fileanh/a12.jpg', name: "Bánh ít", describe: 'Bánh được làm từ bột nếp, nhân đậu xanh và dừa. bên ngoài bánh đều được gói bằng lá chuối xanh.', title: "Nước chấm tuyệt hảo", price: 15000 },
+    { id: 9, image: 'fileanh/a13.jpg', name: "Nem lụi", describe: 'Nem lụi Huế được làm từ thịt heo giã nhuyễn, bì thái mỏng như miến, mỡ heo thái hạt lựu, rồi tất cả các nguyên liệu đem ướp cùng muối, tiêu đường, thính và trộn đều lên', title: "Chứa đầy đủ gia vị", price: 10000 },
+    { id: 10, image: 'fileanh/a14.jpg', name: "Bánh xèo", describe: 'Nhân bánh cũng tương tự như bánh khoái, có thêm củ sắn và đại xanh chưa được bỏ vỏ.', title: "Nước chấm tuyệt hảo", price: 20000 },
+    { id: 11, image: 'fileanh/a15.jpg', name: "Bánh ép", describe: 'Bánh ép Huế được ép thủ công nhiều lần bằng khuôn gang trên bếp than đỏ lửa.', title: "Loại bột chỉ có ở Huế", price: 5000 },
+    { id: 12, image: 'fileanh/a16.jpg', name: "Mè xửng", describe: 'Mè xửng Huế nổi tiếng với vị ngọt ngào, béo bùi của mạch nha hòa quyện với đậu phộng và mè vừng.', title: "Chỉ có thể ở Huế", price: 15000 },
 ]
 
 
@@ -50,50 +50,56 @@ let listData = [
 // }
 
 
-// Bắt đầu lấy phần muốn ánh xạ
-let listProductItem = document.getElementById('list-products')
-let html = ``
-// function handleRate(rating) {
-//     let htmlRating = ``
-//     for (let i = 1; i <= rating; i++) {
-//         htmlRating += `
-//             <span>
-//                 <img src="fileanh/star.png" alt="">
-//             </span>
-//         `
-//     }
-//     return htmlRating
-// }
-listData.map((product, index) => {
-    return html += `
-    <div class="item">
-            <img src="${product.image}" class ="img" alt="">
-            <div class="stars">
+
+function renderProduct(listData) {
+    // Bắt đầu lấy phần muốn ánh xạ
+    let listProductItem = document.getElementById('list-products')
+    let html = ``
+    // function handleRate(rating) {
+    //     let htmlRating = ``
+    //     for (let i = 1; i <= rating; i++) {
+    //         htmlRating += `
+    //             <span>
+    //                 <img src="fileanh/star.png" alt="">
+    //             </span>
+    //         `
+    //     }
+    //     return htmlRating
+    // }
+    console.log(listData);
+    listData.map((product, index) => {
+        return html += `
+        <div class="item">
+                <img src="${product.image}" class ="img" alt="">
+                <div class="stars">
+                <span>
+                <img src="fileanh/star.png" alt="">
+            </span>
             <span>
-            <img src="fileanh/star.png" alt="">
-        </span>
-        <span>
-            <img src="fileanh/star.png" alt="">
-        </span>
-        <span>
-            <img src="fileanh/star.png" alt="">
-        </span>
-        <span>
-            <img src="fileanh/star.png" alt="">
-        </span>
-        <span>
-            <img src="fileanh/star.png" alt="">
-        </span>
+                <img src="fileanh/star.png" alt="">
+            </span>
+            <span>
+                <img src="fileanh/star.png" alt="">
+            </span>
+            <span>
+                <img src="fileanh/star.png" alt="">
+            </span>
+            <span>
+                <img src="fileanh/star.png" alt="">
+            </span>
+                </div>
+                <div class="name"><a href='detail.html?id=${product.id}'>${product.name}</a></div>
+                <div class="desc">${product.title}</div>
+                <div class="price">${product.price} VNĐ</div>
+                <div class='but'><button  class="but-sale" onclick='book(${JSON.stringify(product)})'  style="border-radius: 7px;">mua ngay</button></div>
             </div>
-            <div class="name"><a href='detail.html?id=${product.id}'>${product.name}</a></div>
-            <div class="desc">${product.description}</div>
-            <div class="price">${product.price} VNĐ</div>
-            <div class='but'><button  class="but-sale" onclick='book(${JSON.stringify(product)})'  style="border-radius: 7px;">mua ngay</button></div>
-        </div>
-    `
-})
-// gán nội dung của phần html thực hiện ở trên vào listProducItem
-listProductItem.innerHTML = html;
+        `
+    })
+    // gán nội dung của phần html thực hiện ở trên vào listProducItem
+    listProductItem.innerHTML = html;
+
+}
+
 // khỏi tạo biến và đưa nó về dạng mảng vì ở localStorage đang ở dạng string (sử dụng JSON.parse(localstorage.getitem('từ khóa muốn lưu')))
 let listCart = JSON.parse(localStorage.getItem('listCart'))
 // cần phải gán cho listCart về mảng vì khi parse về mảng listcart đang ở dạng null 
@@ -118,7 +124,7 @@ function book(product) {
     // nếu sản phẩm chưa có trong listcart thì ta push nó vào
     if (!checksp) {
         listCart.push(
-            { idProduct: product.id, name: product.name, image: product.image, category: product.category, price: product.price, quantity: 1, total: product.price }
+            { idProduct: product.id, name: product.name, image: product.image, describe: product.describe, price: product.price, quantity: 1, total: product.price }
         )
     }
     // lưu trữ phần nội dụng của listcart trên trang web bằng localstoage.setitem và chuyển nó về string(' phải chuyển về dạng string mới lưu được trên localstorage '). 
@@ -143,9 +149,9 @@ function renderCart(listCart) {
             <td class ="index">${index + 1}</td>
             <td class ="name">${product.name}</td>
             <td class ="img"><img class='image' src='${product.image}' alt='' style="border-radius: 22px; width: 75px;" /></td>
-            <td>${product.category}</td>
-            <td class = "ipQuantity"><input min='1' max='100' type="number" id="quantity-${product.idProduct}" onChange=change('${product.idProduct}') value="${product.quantity}" id="quantity" style="width: 70px;"></td>
-            <td class ="but"><button  style="border-radius: 5px; width:60px" onclick = "eating(${product.idProduct})">Hủy</button></td>
+            <td>${product.describe}</td>
+            <td class = "ipQuantity"><input min='1' max='100' type="number" id="quantity-${product.idProduct}" onclick=change('${product.idProduct}' style="cursor: pointer" value="${product.quantity}" id="quantity" style="width: 70px;"></td>
+            <td class ="but"><button class= 'button1'  style="border-radius: 5px; width:60px" onclick = "eating(${product.idProduct})">Hủy</button></td>
             <td id ="price-${product.idProduct}">${product.price} VNĐ</td>
             <td id = "total-${product.idProduct}" style = "width:150px;">${product.total} VNĐ</td>
        </tr>
@@ -169,14 +175,16 @@ function getTotalPayment() {
     for (let i = 0; i < listCart.length; i++) {
         let product = listCart[i]
         totalPayment += product.total;
+
     } return totalPayment;
+
 }
 // tạo sự kiện ở ô input để khi tăng giảm số lượng thì thay đổi tổng tiền từng đơn hàng và toàn bộ sản phẩm
 function change(id) {
     // tạo biến và lẫy  số lượng sản phẩm
-    let quantityElement = +document.getElementById(`quantity-${id}`).value
+    let quantityElement = +document.getElementById(`quantity-${id}`).value;
     // tạo biến và lấy giá trị đơn giá mỗi sản phẩm(1)
-    let price = +document.getElementById(`price-${id}`).innerHTML.split(' ')[0]
+    let price = +document.getElementById(`price-${id}`).innerHTML.split(' ')[0];
     // khởi tạo vong lặp 
     for (let i = 0; i < listCart.length; i++) {
         if (listCart[i].idProduct == id) {
@@ -187,19 +195,21 @@ function change(id) {
                 alert('vui lòng nhập lại số lượng')
                 return;
             }
-
         }
     }
     // khi có số lượng sản phâm và tổng tiền của từng sản phầm thi set lên local storage để lưu trữ khi load lại không bị mất
     localStorage.setItem("listCart", JSON.stringify(listCart))
     // đặt tên cho biến gọi đến phần tổng giá tiền mỗi sản phẩm 
     let totalElement = document.getElementById(`total-${id}`)
+    console.log(totalElement);
     // lấy biến đã được gọi là giá tiền mỗi sản phẩm * số lượng sản phẩm
     let total = price * quantityElement
     totalElement.innerHTML = `${total} VNĐ`
+    console.log(total);
     // gán biến  và gán bằng hàm gettotal để nhận giá trị và in ra tổng toàn bộ sp
     let totalPayment = getTotalPayment();
     document.getElementById('payment').innerText = `${totalPayment} VNĐ`;
+    console.log(totalPayment);
 }
 // function changeQuantity() {
 //     let priceElement = document.getElementById('total')
@@ -262,3 +272,25 @@ function eating(id) {
 //     })
 //     cart1.innerHTML = html1
 // } document.getElementById('item1').innerText = html;
+class list {
+    constructor(name, image, title, price) {
+        this.name = name;
+        this.image = image;
+        this.title = title;
+        this.price = price;
+    }
+}
+function createNewProduct() {
+    let name = document.getElementById('name').value;
+    let image = document.getElementById('image').value;
+    let title = document.getElementById('title').value;
+    let price = Number(document.getElementById('price').value);
+    let newListData = new list(name, image, title, price);
+    listData.push(newListData);
+    console.log(listData);
+    window.localStorage.setItem('listData', JSON.stringify(listData));
+    renderProduct(listData);
+}
+
+renderProduct(listData);
+console.log(listData);

@@ -1,4 +1,4 @@
-# Mini Project Module 1 - Restaurant-Project
+# Restaurant-Project
 
 ## Kiến thức áp dụng
 + HTML/CSS
