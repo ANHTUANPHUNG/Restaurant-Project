@@ -228,15 +228,17 @@
 
 #list-products .item .img:hover {
     width: 290px;
-    margin-top: 0px;
+
+
     cursor: pointer;
 }
 
 #list-products .item .img {
     display: block;
     margin: 0px auto;
-    margin-top: 17px;
+
     border-radius: 10px;
+    width: 259px;
 
 }
 
