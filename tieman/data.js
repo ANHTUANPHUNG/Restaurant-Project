@@ -51,7 +51,9 @@ let listData = [
 
 
 
+
 function renderProduct(listData) {
+
     // Bắt đầu lấy phần muốn ánh xạ
     let listProductItem = document.getElementById('list-products')
     let html = ``
@@ -95,20 +97,10 @@ function renderProduct(listData) {
             </div>
         `
     })
+
     // gán nội dung của phần html thực hiện ở trên vào listProducItem
     listProductItem.innerHTML = html;
-
 }
-
-// khỏi tạo biến và đưa nó về dạng mảng vì ở localStorage đang ở dạng string (sử dụng JSON.parse(localstorage.getitem('từ khóa muốn lưu')))
-let listCart = JSON.parse(localStorage.getItem('listCart'))
-// cần phải gán cho listCart về mảng vì khi parse về mảng listcart đang ở dạng null 
-if (listCart == null) {
-    listCart = []
-}
-// 
-renderCart(listCart)
-// sử dụng sự kiên onclick để đưa sản phẩm và phần cần tính tiền
 function book(product) {
     // tạo 1 thẻ để xem sản phẩm đã ó trong giỏ hàng hay chưa
     let checksp = false
@@ -132,7 +124,16 @@ function book(product) {
     renderCart(listCart)
 
 }
-// tạo hàm renderCart chưa mảng  listCart lúc đầu ta tạo 
+
+// khỏi tạo biến và đưa nó về dạng mảng vì ở localStorage đang ở dạng string (sử dụng JSON.parse(localstorage.getitem('từ khóa muốn lưu')))
+let listCart = JSON.parse(localStorage.getItem('listCart'))
+// cần phải gán cho listCart về mảng vì khi parse về mảng listcart đang ở dạng null 
+if (listCart == null) {
+    listCart = []
+}
+// 
+renderCart(listCart)
+// sử dụng sự kiên onclick để đưa sản phẩm và phần cần tính tiền
 function renderCart(listCart) {
     // tạo biến = nơi cần ánh xạ đến
     let listSale = document.getElementById('list-saletbody');
@@ -150,14 +151,12 @@ function renderCart(listCart) {
             <td class ="name">${product.name}</td>
             <td class ="img"><img class='image' src='${product.image}' alt='' style="border-radius: 22px; width: 75px;" /></td>
             <td>${product.describe}</td>
-            <td class = "ipQuantity"><input min='1' max='100' type="number" id="quantity-${product.idProduct}" onclick=change('${product.idProduct}' style="cursor: pointer" value="${product.quantity}" id="quantity" style="width: 70px;"></td>
+            <td class = "ipQuantity"><input min='1' max='100' type="number" id="quantity-${product.idProduct}" onchange=change('${product.idProduct}') style="cursor: pointer" value="${product.quantity}" id="quantity" style="width: 70px;"></td>
             <td class ="but"><button class= 'button1'  style="border-radius: 5px; width:60px" onclick = "eating(${product.idProduct})">Hủy</button></td>
             <td id ="price-${product.idProduct}">${product.price} VNĐ</td>
             <td id = "total-${product.idProduct}" style = "width:150px;">${product.total} VNĐ</td>
-       </tr>
-       
+       </tr>   
         `
-
     });
     // gán giá tri trong even1 vào listsale'chứa list-saletbody'
     listSale.innerHTML = event1;
@@ -166,6 +165,9 @@ function renderCart(listCart) {
     // changeQuantity()
 
 }
+
+// tạo hàm renderCart chưa mảng  listCart lúc đầu ta tạo 
+
 // tạo hàm để tính tổng giá tiền
 function getTotalPayment() {
     // tạo biến để lấy string từ local về và chuyển sang dạng mảng để lấy giá trị tính ()
@@ -181,16 +183,19 @@ function getTotalPayment() {
 }
 // tạo sự kiện ở ô input để khi tăng giảm số lượng thì thay đổi tổng tiền từng đơn hàng và toàn bộ sản phẩm
 function change(id) {
+    let listCart = JSON.parse(localStorage.getItem('listCart'))
     // tạo biến và lẫy  số lượng sản phẩm
     let quantityElement = +document.getElementById(`quantity-${id}`).value;
     // tạo biến và lấy giá trị đơn giá mỗi sản phẩm(1)
     let price = +document.getElementById(`price-${id}`).innerHTML.split(' ')[0];
     // khởi tạo vong lặp 
+    // nếu số lương sản phẩm bị bé hơn 0 thì yêu cầu người dùng nhập lại
+
     for (let i = 0; i < listCart.length; i++) {
+
         if (listCart[i].idProduct == id) {
             listCart[i].quantity = quantityElement
             listCart[i].total = quantityElement * price
-            // nếu số lương sản phẩm bị bé hơn 0 thì yêu cầu người dùng nhập lại
             if (listCart[i].quantity <= 0) {
                 alert('vui lòng nhập lại số lượng')
                 return;
@@ -210,6 +215,7 @@ function change(id) {
     let totalPayment = getTotalPayment();
     document.getElementById('payment').innerText = `${totalPayment} VNĐ`;
     console.log(totalPayment);
+
 }
 // function changeQuantity() {
 //     let priceElement = document.getElementById('total')
@@ -290,7 +296,20 @@ function createNewProduct() {
     console.log(listData);
     window.localStorage.setItem('listData', JSON.stringify(listData));
     renderProduct(listData);
+
 }
 
-renderProduct(listData);
 console.log(listData);
+function search() {
+    let keyword = document.getElementById('keyword').value;
+    let result = listData.filter(function (product, index) {
+        return product.name.toLowerCase().includes(keyword.toLowerCase())
+    })
+    renderProduct(result)
+}
+if (localStorage.getItem('listData') != null) {
+    let listData = JSON.parse(localStorage.getItem('listData'));
+    renderProduct(listData);
+} else {
+    renderProduct(listData);
+}

@@ -510,3 +510,18 @@
 #button2:hover {
     background-color: gold;
 }
+
+#keyword {
+    border-radius: 5px;
+    width: 230px;
+    cursor: pointer;
+}
+
+#button3 {
+    background-color: #f48484;
+    cursor: pointer;
+}
+
+#button3:hover {
+    background-color: gold;
+}

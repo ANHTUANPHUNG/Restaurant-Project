@@ -55,7 +55,11 @@
             </div>
         </div>
         <div id="wp-products">
-            <h2 id="sanpham">Món ăn của nhà hàng bà Tuyết</h2>
+            <div style="text-align: end;"> <input type="text" id="keyword" oninput="search()">
+                <button onclick="search()" id="button3">Tìm kiếm</button>
+            </div>
+            <h2 id="sanpham">Thực đơn của nhà hàng bà Tuyết</h2>
+
             <ul id="list-products">
             </ul>
             <div class="list-page">
@@ -75,6 +79,11 @@
             <div class="list-sale">
                 <table class="list-saletb" style="width: 100%; " border="1" cellspacing="0" ;>
                     <thead class="list-salethead" style="background-color:#f48484;">
+                        <tr>
+                            <th colspan="8">
+                                <h1>Sản phẩm thực khách muốn mua</h1>
+                            </th>
+                        </tr>
                         <tr class="list-saletr">
                             <th>STT</th>
                             <th>Tên món</th>
